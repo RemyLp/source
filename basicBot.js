@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+        $.get('https://rawgit.com/RemyLp/bot-edit/master/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -250,7 +250,7 @@
         status: false,
         name: 'basicBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+        scriptLink: 'https://rawgit.com/RemyLp/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
         chatLink: 'https://rawgit.com/RemyLp/source/master/lang/enn.json',
         chat: null,
@@ -261,7 +261,7 @@
             botName: 'basicBot',
             language: 'english',
             chatLink: 'https://rawgit.com/RemyLp/source/master/lang/enn.json',
-            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+            scriptLink: 'https://rawgit.com/RemyLp/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 10, // 1-200
             startupVolume: 30, // 0-100
@@ -2731,12 +2731,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+                        $.get('https://rawgit.com/RemyLp/bot-edit/master/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(basicBot.chat.langerror, {
-                                    link: 'http://git.io/vJ9nI'
+                                    link: 'https://git.io/v5fmk'
                                 }));
                             } else {
                                 basicBot.settings.language = argument;
